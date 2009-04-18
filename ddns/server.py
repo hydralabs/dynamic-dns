@@ -23,7 +23,6 @@
 Dynamic DNS Update Server
 """
 
-from twisted.internet import threads
 from twisted.application import internet, service
 from twisted.web import static, resource, server
 
@@ -66,9 +65,4 @@ class UrlHandler(resource.Resource):
 root = UrlHandler()
 root.putChild("update", UrlHandler())
 
-
-application = service.Application('web')
 site = server.Site(root)
-sc = service.IServiceCollection(application)
-i = internet.TCPServer(8080, site)
-i.setServiceParent(sc)

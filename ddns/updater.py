@@ -23,6 +23,8 @@
 Dynamic DNS Updater
 """
 
+from twisted.internet import threads
+
 import dns.query
 import dns.tsigkeyring
 import dns.update

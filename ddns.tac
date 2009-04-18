@@ -32,11 +32,10 @@ from twisted.internet import threads
 from twisted.application import internet, service
 from twisted.web import static, resource, server
 
-from ddns.server import root
+from ddns.server import site
 
 
 application = service.Application('web')
-site = server.Site(root)
 sc = service.IServiceCollection(application)
 i = internet.TCPServer(8080, site)
 i.setServiceParent(sc)
