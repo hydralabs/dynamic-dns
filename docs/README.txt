@@ -13,10 +13,10 @@ Dynamic DNS Updater
 
 To run the server use the following command:
 
-  twistd -y ddns.py
+  twistd -y ddns.tac
   
 By default the server will listen on port 8080, though this can be changed
-in ddns.py
+in ddns.tac
   
 You may want to consult the "twistd" documentation for more options such
 as logging and dameonizing the application.
