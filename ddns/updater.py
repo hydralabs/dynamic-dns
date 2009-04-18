@@ -57,7 +57,7 @@ class DynamicDNSUpdater(object):
         response = dns.query.tcp(update, self.dns_ip)
         #print response
 
-        if response.rcode() != 0:
-            raise ValueError("Unexpected Response Code")
+        #if response.rcode() != 0:
+            #raise ValueError("Unexpected Response Code")
 
         return str(response)
